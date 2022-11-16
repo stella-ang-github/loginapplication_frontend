@@ -12,18 +12,6 @@ const login = async (username, password) => {
     .catch((error) => {
       return { isError: true, error: error };
     });
-  // return await fetch(`http://localhost:8080/api/user/login`, {
-  //   method: "GET",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify({
-  //     username,
-  //     password,
-  //   }),
-  // })
-  //   .then((res) => console.log(res))
-  //   .catch((error) => {
-  //     console.log(error);
-  //   });
 };
 
 export default login;

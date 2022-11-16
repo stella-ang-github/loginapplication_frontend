@@ -17,18 +17,12 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [hasError, setHasError] = useState(false);
   const navigate = useNavigate();
-  // const [invalidInput, setInvalidInput] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  // const [shortenLink, setShortenLink] = useState("");
-  // const [copiedSuccess, setCopiedSuccess] = useState(false);
 
   const onSubmit = async () => {
     setIsLoading(true);
     setHasError(false);
     await login(username, password).then((result) => {
-      console.log("===== RESULT");
-      console.log(result);
-
       if (result.isError) {
         setHasError(true);
         setIsLoading(false);

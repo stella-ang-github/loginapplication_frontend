@@ -9,9 +9,6 @@ const MainPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
 
-  console.log("==== USER");
-  console.log(state);
-
   const onLogout = () => {
     navigate(-1);
   };
